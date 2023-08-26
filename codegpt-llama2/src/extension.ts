@@ -16,7 +16,15 @@ export function activate(context: vscode.ExtensionContext) {
 	let disposable = vscode.commands.registerCommand('codegpt-llama2.helloWorld', () => {
 		// The code you place here will be executed every time your command is executed
 		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from CodeGPT-llama2!');
+		
+		vscode.window.showInputBox().then((value) => {
+			if (value === undefined) {
+				return;
+			}
+			vscode.window.showInformationMessage('you entered: ' + value);
+		});
+
+		
 	});
 
 	context.subscriptions.push(disposable);
