@@ -1,4 +1,4 @@
-# Llama2 GPT Code helper VSCode Extension
+# Llama2 GPT CodePilot VSCode Extension
 
 
 ## To use this repo
