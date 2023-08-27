@@ -21,7 +21,11 @@ export function activate(context: vscode.ExtensionContext) {
 			if (value === undefined) {
 				return;
 			}
-			vscode.window.showInformationMessage('you entered: ' + value);
+			// open new document tab with the input text
+			vscode.workspace.openTextDocument({content: value}).then((doc) => {
+				vscode.window.showTextDocument(doc);
+			}	);
+			
 		});
 
 		
