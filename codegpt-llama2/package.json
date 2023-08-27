@@ -28,8 +28,7 @@
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "npm run compile-tests && npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js",
-    "testCum": "tsc ./src/lib/apiCall.ts"
+    "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.1",
@@ -49,5 +48,7 @@
   "dependencies": {
     "axios": "^1.5.0",
     "clarifai-nodejs-grpc": "^9.7.0"
-  }
+  },
+  "publisher": "GracjanWojciechowski"
+  
 }
